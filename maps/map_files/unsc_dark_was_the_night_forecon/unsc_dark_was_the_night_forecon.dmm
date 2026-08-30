@@ -1245,6 +1245,22 @@
 	},
 /turf/open/floor/almayer,
 /area/dark_was_the_night/armory)
+"db" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/dark_was_the_night)
+"dc" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = -12;
+	id = "kitchen"
+	},
+/turf/closed/wall/unsc,
+/area/dark_was_the_night)
 "dj" = (
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
@@ -2711,7 +2727,8 @@
 	pixel_x = 7;
 	pixel_y = -3;
 	id = "ship_armory";
-	req_one_access_txt = "19;12"
+	req_one_access_txt = "19;12";
+	name = "armory blast door control"
 	},
 /turf/open/floor/almayer,
 /area/dark_was_the_night/briefing)
@@ -3361,6 +3378,10 @@
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff";
 	dir = 8
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2;
+	id = "kitchen"
 	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
@@ -5389,7 +5410,8 @@
 /obj/structure/machinery/door_control/brbutton/alt{
 	pixel_y = -18;
 	req_one_access_txt = "8";
-	id = "autodoc"
+	id = "autodoc";
+	name = "autosurgeon blast door control"
 	},
 /turf/open/floor/almayer/sterile_green_side/northwest,
 /area/dark_was_the_night/medical)
@@ -5718,7 +5740,8 @@
 /obj/structure/machinery/door_control/brbutton/alt{
 	pixel_y = -18;
 	req_one_access_txt = "8";
-	id = "autodoc"
+	id = "autodoc";
+	name = "autosurgeon blast door control"
 	},
 /turf/open/floor/almayer/plate,
 /area/dark_was_the_night/medical)
@@ -5898,6 +5921,10 @@
 	light_color = "#dae2ff";
 	dir = 4
 	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2;
+	id = "kitchen"
+	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
 "Ci" = (
@@ -6069,6 +6096,10 @@
 /area/dark_was_the_night/hangar/ventral)
 "Dk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2;
+	id = "kitchen"
+	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
 "Dl" = (
@@ -6087,7 +6118,8 @@
 /area/dark_was_the_night/dorms)
 "Dp" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
+	dir = 2;
+	id = "kitchen"
 	},
 /obj/structure/machinery/door/airlock/unsc{
 	dir = 1
@@ -7048,7 +7080,9 @@
 /obj/structure/machinery/door_control/brbutton{
 	pixel_x = 1;
 	pixel_y = -8;
-	id = "ship_armory"
+	id = "ship_armory";
+	req_one_access_txt = "19;12";
+	name = "armory blast door control"
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night/briefing)
@@ -8687,7 +8721,7 @@
 	dir = 2
 	},
 /obj/structure/window/framed/unsc,
-/obj/structure/curtain/open/black,
+/obj/structure/curtain/black,
 /turf/open/shuttle/escapepod/floor4,
 /area/dark_was_the_night/dorms)
 "RI" = (
@@ -8863,6 +8897,10 @@
 /obj/item/reagent_container/food/snacks/microwavable/donkpocket{
 	pixel_x = -7;
 	pixel_y = 6
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2;
+	id = "kitchen"
 	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
@@ -14839,8 +14877,8 @@ hz
 Ej
 Jy
 Jy
-ID
-ID
+dc
+db
 ID
 be
 aW
