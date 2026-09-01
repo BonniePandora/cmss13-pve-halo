@@ -434,14 +434,16 @@
 "be" = (
 /obj/structure/sign/safety/security{
 	pixel_x = 7;
-	pixel_y = -9
+	pixel_y = -9;
+	name = "rifleman locker"
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night)
 "bf" = (
 /obj/structure/sign/safety/autodoc{
 	pixel_x = 7;
-	pixel_y = -9
+	pixel_y = -9;
+	name = "corpsman locker"
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night)
@@ -470,7 +472,8 @@
 "bh" = (
 /obj/structure/sign/safety/one{
 	pixel_x = 7;
-	pixel_y = -9
+	pixel_y = -9;
+	name = "squad leader locker"
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night)
@@ -481,7 +484,8 @@
 "bj" = (
 /obj/structure/sign/safety/radio_rad{
 	pixel_x = 7;
-	pixel_y = -9
+	pixel_y = -9;
+	name = "RTO locker"
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night)
@@ -506,14 +510,16 @@
 "bm" = (
 /obj/structure/sign/safety/ammunition{
 	pixel_x = 7;
-	pixel_y = -9
+	pixel_y = -9;
+	name = "specialist locker"
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night)
 "bn" = (
 /obj/structure/sign/safety/two{
 	pixel_x = 7;
-	pixel_y = -9
+	pixel_y = -9;
+	name = "fireteam leader locker"
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night)
@@ -1261,6 +1267,19 @@
 	},
 /turf/closed/wall/unsc,
 /area/dark_was_the_night)
+"dd" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/dark_was_the_night/upper_hallway)
+"de" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/dark_was_the_night/upper_hallway)
 "dj" = (
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
@@ -3379,9 +3398,10 @@
 	light_color = "#dae2ff";
 	dir = 8
 	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
-	id = "kitchen"
+	id = "kitchen";
+	name = "\improper Kitchen"
 	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
@@ -5921,9 +5941,10 @@
 	light_color = "#dae2ff";
 	dir = 4
 	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
-	id = "kitchen"
+	id = "kitchen";
+	name = "\improper Kitchen"
 	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
@@ -6096,9 +6117,10 @@
 /area/dark_was_the_night/hangar/ventral)
 "Dk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/door/firedoor/border_only/almayer{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
-	id = "kitchen"
+	id = "kitchen";
+	name = "\improper Kitchen"
 	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
@@ -6117,21 +6139,24 @@
 /turf/open/shuttle/escapepod/floor4,
 /area/dark_was_the_night/dorms)
 "Dp" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2;
-	id = "kitchen"
-	},
 /obj/structure/machinery/door/airlock/unsc{
 	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "kitchen";
+	name = "\improper Kitchen"
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/dark_was_the_night/kitchen)
 "Ds" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
 /obj/structure/machinery/door/airlock/unsc{
 	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "kitchen";
+	name = "\improper Kitchen"
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/dark_was_the_night/kitchen/freezer)
@@ -8898,9 +8923,10 @@
 	pixel_x = -7;
 	pixel_y = 6
 	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
+/obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
-	id = "kitchen"
+	id = "kitchen";
+	name = "\improper Kitchen"
 	},
 /turf/open/floor/almayer/sterile,
 /area/dark_was_the_night/kitchen)
@@ -9322,7 +9348,7 @@
 "UC" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
-	id = "ship_armory";
+	id = "ship_armory2";
 	name = "\improper General Equipment"
 	},
 /turf/open/floor/almayer/pod_landing_floor,
@@ -16604,14 +16630,14 @@ kY
 kY
 JW
 AK
-Rp
-Rp
-Rp
-Rp
+kY
+kY
+kY
+kY
+kY
 KJ
 vz
 KJ
-Rp
 Rp
 Rp
 qW
@@ -16730,10 +16756,10 @@ qB
 qB
 qB
 Ea
+Aa
 sq
 vM
 vM
-BU
 BU
 ak
 aY
@@ -16863,9 +16889,9 @@ BU
 BU
 Aa
 Aa
-Aa
-Aa
-Aa
+BU
+BU
+BU
 Aa
 PQ
 px
@@ -16979,12 +17005,12 @@ OM
 Rg
 BU
 gw
-zU
+de
+dd
+dd
 ys
 ys
-JZ
-FT
-Aa
+tJ
 gW
 Aa
 Aa
@@ -17102,11 +17128,11 @@ kY
 kY
 kY
 kY
-iA
-He
-iA
 kY
 kY
+iA
+iA
+iA
 kY
 kY
 kY
