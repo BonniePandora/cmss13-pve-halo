@@ -156,6 +156,13 @@
 	if(living_mob.mob_size >= MOB_SIZE_BIG)
 		return //Big xenos are not affected.
 
+	//HALO PVE EDIT - START - KNOCKBACK ADJUSTMENTS
+	if(living_mob.mob_size >= MOB_SIZE_XENO)
+		shake_camera(living_mob, 3, 4)
+		knockback_effects(living_mob, fired_projectile)
+		return //Elites & Brutes aren't thrown around by this kind of thing
+	//HALO PVE EDIT - END - KNOCKBACK ADJUSTMENTS
+
 	shake_camera(living_mob, 3, 4)
 	knockback_effects(living_mob, fired_projectile)
 	slam_back(living_mob, fired_projectile)
