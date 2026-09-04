@@ -91,35 +91,30 @@
 	handful_state = "8g_shell"
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/unsc
 	accurate_range = 8
-	max_range = 8
+	max_range = 11
 	damage = 70
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	firing_freq_offset = SOUND_FREQ_LOW
 	shell_casing = /obj/effect/decal/ammo_casing/redshell
-	COOLDOWN_DECLARE(slowed) //Not perfect, but it's a var living mobs have which we also adjust through the knockback effects, so it suffices
-
-#define SHOTGUN_STUN_COOLDOWN 30
 
 /datum/ammo/bullet/shotgun/spread/unsc
 	name = "additional buckshot, USCM special type"
 	accurate_range = 8
-	max_range = 8
+	max_range = 11
 	damage = 70
 	firing_freq_offset = SOUND_FREQ_LOW
 
 /datum/ammo/bullet/shotgun/buckshot/unsc/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 3)
+	if(issangheili(M))
+		return
+	knockback(M, P, 4)
 
 /datum/ammo/bullet/shotgun/buckshot/unsc/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
-	/// Cooldown for reapplying the stun, so we can't just stunlock the bigger baddies into hell
-	if(living_mob.mob_size >= MOB_SIZE_XENO)
-		to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
-		if(!COOLDOWN_FINISHED(living_mob, slowed))
-			return
-		else
-			living_mob.Stun(1.5)
-			living_mob.Slow(2)
-			COOLDOWN_START(living_mob, slowed, SHOTGUN_STUN_COOLDOWN)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.Stun(2.5)
+		target.Slow(4)
 	else
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.Stun(3)
@@ -128,26 +123,22 @@
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/spread/unsc/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 3)
+	if(issangheili(M))
+		return
+	knockback(M, P, 4)
 
 /datum/ammo/bullet/shotgun/spread/unsc/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
-	/// Cooldown for reapplying the stun, so we can't just stunlock the bigger baddies into hell
-	if(living_mob.mob_size >= MOB_SIZE_XENO)
-		to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
-		if(!COOLDOWN_FINISHED(living_mob, slowed))
-			return
-		else
-			living_mob.Stun(1.5)
-			living_mob.Slow(2)
-			COOLDOWN_START(living_mob, slowed, SHOTGUN_STUN_COOLDOWN)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.Stun(2.5)
+		target.Slow(4)
 	else
 		if(!isyautja(living_mob)) //Not predators.
 			living_mob.Stun(3)
 			living_mob.Slow(5)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
-
-#undef SHOTGUN_STUN_COOLDOWN
 
 /datum/ammo/bullet/shotgun/beanbag/unsc
 	name = "MAG LLHB"
